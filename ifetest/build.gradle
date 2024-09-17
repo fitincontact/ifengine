@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'org.fitin.Main'
+mainClassName = 'org.fitin.TestMain'
 
 group = 'org.fitin'
 version = '1.0-SNAPSHOT'

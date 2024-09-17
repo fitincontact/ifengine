@@ -9,35 +9,17 @@ import java.util.Scanner;
 @Service
 public class FirstService implements ApplicationRunner {
 
-//    @Override
-//    public void run(ApplicationArguments args) throws Exception {
-//        System.out.println("Application started. Type 'exit' to quit.");
-//
-//        Scanner scanner = new Scanner(System.in);
-//        while (true) {
-//            System.out.print("Enter command: ");
-//            String input = scanner.nextLine();
-//
-//            if ("exit".equalsIgnoreCase(input)) {
-//                System.out.println("Exiting...");
-//                break; 
-//            }
-//
-//            System.out.println("You entered: " + input);
-//        }
-//    }
-
     private MyData myData;
 
-    public void setMyData(MyData myData) {
+
+    public FirstService(MyData myData) {
         this.myData = myData;
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("Application started. Type 'exit' to quit.");
-        //System.out.println("Received MyData: " + myData.getId());
-        //System.out.println("Received MyData: " + myData);
+        System.out.println("Received MyData: " + myData.getId());
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -46,6 +28,7 @@ public class FirstService implements ApplicationRunner {
 
             if ("exit".equalsIgnoreCase(input)) {
                 System.out.println("Exiting...");
+                break;
             }
 
             System.out.println("You entered: " + input);
