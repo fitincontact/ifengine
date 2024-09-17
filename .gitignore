@@ -46,6 +46,8 @@ build/
 .mtj.tmp/
 
 # Package Files #
+!ifetest/libs/
+!ifetest/libs/*.jar
 *.jar
 *.war
 *.nar
