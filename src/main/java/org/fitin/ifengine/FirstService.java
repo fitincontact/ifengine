@@ -1,27 +1,21 @@
 package org.fitin.ifengine;
 
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.stereotype.Service;
-
 import java.util.Scanner;
 
-@Service
-public class FirstService implements ApplicationRunner {
+public class FirstService {
 
     private MyData myData;
-
 
     public FirstService(MyData myData) {
         this.myData = myData;
     }
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run() {
         System.out.println("Application started. Type 'exit' to quit.");
-        System.out.println("Received MyData: " + myData.getId());
+        System.out.println("Received MyData: " + this.myData.getId());
 
         Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.print("Enter command: ");
             String input = scanner.nextLine();
