@@ -1,31 +1,24 @@
 package org.fitin.ifengine;
 
-import java.util.Scanner;
+import com.google.inject.Singleton;
+import org.fitin.ifengine.api.IFEngine;
 
-public class FirstService {
+import static org.fitin.ifengine.service.InjectorProvider.getInstance;
 
+@Singleton
+public class FirstService implements IFEngine {
+    SecondService secondService = getInstance(SecondService.class);
     private MyData myData;
 
-    public FirstService(MyData myData) {
-        this.myData = myData;
+    @Override
+    public MyData getMayData() {
+        MyData myData1 = new MyData();
+        this.myData = myData1;
+        return myData1;
     }
 
-    public void run() {
-        System.out.println("Application started. Type 'exit' to quit.");
-        System.out.println("Received MyData: " + this.myData.getId());
-
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.print("Enter command: ");
-            String input = scanner.nextLine();
-
-            if ("exit".equalsIgnoreCase(input)) {
-                System.out.println("Exiting...");
-                break;
-            }
-
-            System.out.println("You entered: " + input);
-        }
+    @Override
+    public void start() {
+        secondService.run(this.myData);
     }
 }
