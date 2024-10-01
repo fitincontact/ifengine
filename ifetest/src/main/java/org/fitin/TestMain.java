@@ -7,12 +7,11 @@ import org.fitin.ifengine.model.Player;
 import static com.google.inject.Guice.createInjector;
 
 public class TestMain {
-    static IFEngine ife = createInjector(new AppModule()).getInstance(IFEngine.class);
+    static IFEngine IFE = createInjector(new AppModule()).getInstance(IFEngine.class);
 
     public static void main(String[] args) {
-        Player myData = ife.getPlayer();
-        myData.setId(345634L);
-        ife.start();
+        Player player = IFE.getPlayer("John Abigail");
+        IFE.start();
     }
 
 }

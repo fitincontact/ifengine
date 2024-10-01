@@ -5,5 +5,14 @@ import lombok.Data;
 @Data
 public class Player {
     //name,description,room,items
-    private Long id;
+    private String word;
+
+    public Player(String word) {
+        this.word = word;
+    }
+
+    public Player addDialog() {
+        return this;
+    }
+
 }

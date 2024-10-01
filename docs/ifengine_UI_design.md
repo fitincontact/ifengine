@@ -7,11 +7,11 @@ Game Engine for word console games.
 
 Console View
 
-- Menu Console
+- Start Console
 - Room Console
 - Inventory Console
 
-### Menu Console
+### Start Console
 
 Sections:
 
@@ -213,7 +213,7 @@ If player enters non existed command then console returns default value from [co
 For some reason player need press enter (menu / command / cutscene consoles).  
 See [Actions](#actions) and [View](#view).
 
-- 'Enter' in the Menu Console moves the Player to a first room (the game is started)
+- 'Enter' in the Start Console moves the Player to a first room (the game is started)
 - 'Enter' in the Room Console updates the Room Console
 - 'Enter' in the Inventory Console moves the Player to the Room Console
 
@@ -304,7 +304,7 @@ Triggers for the action:
 
 Where:
 
-- [menu console](#menu-console)
+- [Start Console](#menu-console)
 - [room console](#room-console)
 - [inventory console](#inventory-console)
 - [dialog console](#dialog-console)
@@ -313,7 +313,7 @@ Where:
 
 Action types:
 
-- menu console
+- Start Console
     - command
     - Enter
 - room console

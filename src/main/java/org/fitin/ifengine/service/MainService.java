@@ -1,15 +1,19 @@
 package org.fitin.ifengine.service;
 
 import com.google.inject.Singleton;
-import org.fitin.ifengine.model.Player;
+import org.fitin.ifengine.model.Info;
 
 import java.util.Scanner;
 
+import static org.fitin.ifengine.model.Game.GAME;
+
 @Singleton
-public class SecondService {
-    public void run(Player player) {
+public class MainService {
+    public void start(Info info) {
+        //todo validate before all
+
         System.out.println("Application started. Type 'exit' to quit.");
-        System.out.println("Received MyData: " + player.getId());
+        System.out.println("Received MyData: " + GAME.getPlayers().get(0).getWord());
 
         Scanner scanner = new Scanner(System.in);
 
