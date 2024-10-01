@@ -1,9 +1,9 @@
 package org.fitin.ifengine.api;
 
-import org.fitin.ifengine.MyData;
+import org.fitin.ifengine.model.Player;
 
 public interface IFEngine {
-    MyData getMayData();
+    Player getPlayer();
 
     void start();
 }

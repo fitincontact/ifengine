@@ -5,7 +5,7 @@
 
     <groupId>org.fitin</groupId>
     <artifactId>ifengine</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>ifengine</name>
     <description>IFEngine - Interactive Fiction Engine</description>
 

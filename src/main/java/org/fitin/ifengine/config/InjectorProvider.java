@@ -1,4 +1,4 @@
-package org.fitin.ifengine.service;
+package org.fitin.ifengine.config;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
