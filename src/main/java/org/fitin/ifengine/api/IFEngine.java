@@ -4,11 +4,7 @@ import org.fitin.ifengine.model.*;
 
 
 public interface IFEngine {
-    void setGameName(String gameName);
-
-    void setGameDescription(String gameDescription);
-
-    void setMenu(String menu);
+    Info getInfo();
 
     Player getPlayer(String word);
 

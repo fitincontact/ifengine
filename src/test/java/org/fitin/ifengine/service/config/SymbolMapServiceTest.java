@@ -6,7 +6,7 @@ import org.fitin.ifengine.model.Player;
 import org.fitin.ifengine.service.IFEngineImpl;
 
 
-public class TestMain {
+public class SymbolMapServiceTest {
     public static void main(String[] args) {
         Injector injector = InjectorProvider.getInjector();
         IFEngineImpl IFEngineImpl = injector.getInstance(IFEngineImpl.class);

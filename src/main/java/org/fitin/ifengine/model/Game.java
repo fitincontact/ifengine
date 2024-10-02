@@ -1,29 +1,24 @@
 package org.fitin.ifengine.model;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@Singleton
 public class Game {
-    public final static Game GAME = new Game();
-    private final List<Cutscene> cutscenes;
-    private final List<Dialog> dialogs;
-    private final List<Door> doors;
-    private final List<Item> items;
-    private final List<Player> players;
-    private final List<Room> rooms;
-    @Setter
-    private Info info;
-    private Game() {
-        cutscenes = new ArrayList<>();
-        dialogs = new ArrayList<>();
-        doors = new ArrayList<>();
-        items = new ArrayList<>();
-        players = new ArrayList<>();
-        rooms = new ArrayList<>();
+    private final Info info = new Info();
+    private final List<Cutscene> cutscenes = new ArrayList<>();
+    private final List<Dialog> dialogs = new ArrayList<>();
+    private final List<Door> doors = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
+    private final List<Player> players = new ArrayList<>();
+    private final List<Room> rooms = new ArrayList<>();
+    @Inject
+    public Game() {
     }
 
     public void add(Cutscene cutscene) {

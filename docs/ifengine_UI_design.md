@@ -15,14 +15,18 @@ Console View
 
 Sections:
 
-- Game name
-- Game description
+- Game Head
+- Game Name
+- Game Description
 - Menu
-- Command prompt
+- Command Prompt
 
 Examples:
 
 ```
+<|><|><|><|><|><|><|><|><|>
+<|>  FLOWERS AND GUNS   <|>
+<|><|><|><|><|><|><|><|><|>
 :Flowers & Guns
 :World of Flowers & Guns wait you! Are you ready to be a Hero?!
 Cut plants, fire trees, fight for fun, bite all!
@@ -35,7 +39,7 @@ Only holly Big Pig Mick can stop you.
 
 Sections:
 
-- Game name & Level Name & Room name (separate by ':')
+- Game name and Level Name and Room name (separate by ':')
 - Room description
 - Inventory short list (separate by '|')
 - Command prompt

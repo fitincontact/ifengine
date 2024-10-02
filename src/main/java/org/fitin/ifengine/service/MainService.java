@@ -1,32 +1,37 @@
 package org.fitin.ifengine.service;
 
+import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import org.fitin.ifengine.model.Info;
 
 import java.util.Scanner;
 
-import static org.fitin.ifengine.model.Game.GAME;
+import static org.fitin.ifengine.util.Print.p;
+import static org.fitin.ifengine.util.Print.pl;
 
 @Singleton
 public class MainService {
-    public void start(Info info) {
-        //todo validate before all
+    private final StartConsoleService startConsoleService;
 
-        System.out.println("Application started. Type 'exit' to quit.");
-        System.out.println("Received MyData: " + GAME.getPlayers().get(0).getWord());
+    @Inject
+    public MainService(StartConsoleService startConsoleService) {
+        this.startConsoleService = startConsoleService;
+    }
+
+    public void start() {
+        //todo validate before all
+        startConsoleService.exec();
 
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
-            System.out.print("Enter command: ");
+            p("Enter command: ");
             String input = scanner.nextLine();
 
             if ("exit".equalsIgnoreCase(input)) {
-                System.out.println("Exiting...");
+                pl("Exiting...");
                 break;
             }
 
-            System.out.println("You entered: " + input);
+            pl("You entered: " + input);
         }
     }
 }
